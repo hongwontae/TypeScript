@@ -1,30 +1,30 @@
-const person : {
-    name : string;
-    age : number;
-    hobbies : string [];
-    role : [number, string];
-} = {
-  name: "Maxmilian",
-  age: 30,
-  hobbies : ['Sports', 'Cooking'],
-  role : [2, 'author']
-};
+type unionSN = number | string;
+type unionLiteralS = 'as-number' | 'as-text';
 
-// person.role.push('admin');
-// person.role[0] = 10;
+function combine(
+  input1: unionSN,
+  input2: unionSN,
+  resulConversion: unionLiteralS,
+) {
+  let result;
+  console.log(resulConversion)
 
-person.role =[0, 'adimin'];
-
-console.log(person.name);
-
-let area : string[]; 
-area = ['Seoul', 'Deajun', 'Busan', 'Lotte'];
-
-console.log(area[3])
-
-
-for(const hobby of person.hobbies){
-    console.log(hobby.toUpperCase());
+  if (
+    (typeof input1 === "number" && typeof input2 === "number") ||
+    resulConversion === "as-number"
+  ) {
+    result = +input1 + +input2;
+  } else {
+    result = input1.toString() + input2.toString();
+  }
+  return result
 }
 
+const combinedAges = combine(30, 26, "as-number");
+console.log(combinedAges);
 
+const combinedStringAges = combine("30", "26", "as-number");
+console.log(combinedStringAges);
+
+const combineNames = combine("hwt", " 20", "as-text");
+console.log(combineNames);
