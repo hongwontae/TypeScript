@@ -1,6 +1,9 @@
 1. 관찰 모드 사용하기
 npm start를 통해 lite-server를 사용한 뒤 ts 파일의 변동사항 떄마다 tsc app.ts를 명시적으로 명령해야 수정되었다.
 
+npm install typescript -g
+=> 전역으로 설치해야 tsc 명령어를 알아듣는다.
+
 tsc fileName.ts --watch(-w) => 자동으로 변동사항이 컴파일되고 브라우저에 적용된다.
 => 다만 이 명령어는 한 파일만 가능하다.
 
