@@ -25,7 +25,7 @@
 => void는 기술적으로 undefinded을 반환한다.
 4-4. undefined 타입 또한 타입으로 사용할 수 있다.
 
-*** function어 undefined 반환타입을 설정하려면 return; => return문의 반환 대상이 없어야 한다.
+*** function이 undefined 반환타입을 설정하려면 return; => return문의 반환 대상이 없어야 한다.
 *** void는 function return 자체가 없음을 의미한다.
 
 
@@ -42,6 +42,8 @@ ex) let cc2 = (a: number, b : number) => number; => cc2는 매개변수 2개, 2�
 6-1. 콜백함수의 매개변수 타입과 개수에 엄격하지만 반환 타입은 크게 상관하지 않는다.
 6-2. 매개변수의 콜백 함수 또한 함수 타입을 화살표 함수로 지정해 줄 수 있다.
 
+*** 호출하는 곳에 타입지정 x/ 매개변수에 타입지정하는 것이다.
+
 
 7. unknown Type
 7-1. 모든 타입을 받아들이지만 해당 값을 할당하려고 할 떄 일반적인 JS 로직을 통해 타입검사를 행해야만 할당할 수 있다.
@@ -53,13 +55,4 @@ ex) let cc2 = (a: number, b : number) => number; => cc2는 매개변수 2개, 2�
 8-2. 에러를 던지면 스크립트가 정지하기 떄문에 undefined마저 할당되지 않는다.
 => 이럴 떄 사용하는 Type이다.
 
-
-
-
-
-
-
-
-
-*** TypeScript의 추론 기능을 통해 반환 타입을 지정하지 않아도 매우 정확하게 유추한다.
 

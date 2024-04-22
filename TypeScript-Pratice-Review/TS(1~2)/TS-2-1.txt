@@ -1,0 +1,39 @@
+1. 타입 할당은 :(콜론)으로 한다.
+
+2. 선언 + 할당을 한 변수의 타입지정은 불필요하다. TS의 타입 추론 기능이 뛰어나기 떄문이다.
+다만 선언만 한 상황이라면 유용하다.
+
+
+2. 원시타입, 객체타입이 존재한다.
+string, number, bigInt, boolean, null, undefined, symbol, obj
+
+
+3. 함수의 매개변수에 타입 지정 가능하다. => 제일 유용하게 사용돤다.
+
+
+4. Obj Type
+let a : {
+    name : string,
+    age : number
+}
+
+
+5. arr Type
+let a : string[] => 문자열로 된 배열만 받아들인다.
+
+
+6. Tuple Type
+고정 길이 + 고정 타입 배열
+let a : [string, number] = ['HWT',30]; 2개의 값, 2개의 타입
+
+
+7. Enum
+열거형 프로퍼티를 생성한다.
+enum enumName {
+    식별자 : value, 식별자 : value
+} => enumName.식별자로 접근한다.
+
+
+8. any
+어떤 값이든 모두 받아들인다.
+let a : any[] = [1,2,'ㄴㄴ',true, {...}];

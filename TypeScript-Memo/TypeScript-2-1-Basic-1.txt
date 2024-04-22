@@ -39,7 +39,7 @@ JS를 통해 에러를 검증하는 코드를 구현할 수 있다. 런타임에
 
 
 5. Type Array
-5-1. : string[]/ : : number[] => arr 타입 할당
+5-1. : string[] : : number[] => arr 타입 할당
 5-2. ex) let sports : string[]; sports : ['soccer','football','like'];
 5-3. TS는 정적 타입 언어이기 떄문에 해당 변수의 타입을 정확히 알고 있기에 IDE 지원이 확실하다.
 
