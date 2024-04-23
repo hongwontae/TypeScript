@@ -63,8 +63,24 @@ addMeals(cbcb, 'Pasta', 'CHOCO-CAKE');
 
 // unKnown Type
 let b7 : unknown;
-b7 = 10;
-console.log(b7)
+let b8 : string;
+
+b7 = 100;
+b7 = 'Max';
+// b8 = b7; => unkwoin 타입 할당 fail => 타입 검사
+
+if(typeof b7 === 'string'){
+    b8 = b7;
+    console.log(b8)
+}
+
+
+// Never Type
+function generateError(n1 : string, n2 : string) : never{
+    throw {message : n1, errorCode : n2}
+}
+generateError('SSSS', 'SSS11');
+
 
 
 

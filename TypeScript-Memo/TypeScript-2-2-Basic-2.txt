@@ -47,7 +47,7 @@ ex) let cc2 = (a: number, b : number) => number; => cc2는 매개변수 2개, 2�
 
 7. unknown Type
 7-1. 모든 타입을 받아들이지만 해당 값을 할당하려고 할 떄 일반적인 JS 로직을 통해 타입검사를 행해야만 할당할 수 있다.
-7-2. ANY Type 보다 조금 엄격한 Type
+=> 아무 값이나 할당하다가 특정 타입의 변수에 unknown 타입의 값을 할당하려고 하면 타입검사를 행햐야 한다는 것이다.
 
 
 8. Never Type
