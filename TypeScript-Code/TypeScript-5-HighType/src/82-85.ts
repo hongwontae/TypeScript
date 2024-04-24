@@ -20,6 +20,7 @@ let savage: elevatedEm = {
   lineName: "Start Line-1",
 };
 
+
 // Type Guard
 type team = {
   name: string;
@@ -76,6 +77,8 @@ function useVehicle(ve : Vehicle){
 useVehicle(v1);
 useVehicle(v2);
 
+
+// 구별된 유니언
 interface Bird{
     type : 'bird';
     flyingSpeed : number;
