@@ -18,6 +18,10 @@
 => 그러나 TS 컴파일 버전이 낮아 Class가 아닌 생성자 함수만 지원되는 버전이 존재한다.
 
 2-3. constructor 안쪽에서 필드를 지정하지 않고 외부에 필드를 지정하는 기술 => JS의 높은 버전
+=> 외부의 필드를 지정해야만 constructor의 변수가 될 수 있다.
+=> 외부의 필드이지만 constructor의 변수가 아닌 경우는 default값을 줘야한다.
+
+** 외부 필드는 key/ constructor의 매개변수는 value를 설정하는 것이다.
 
 
 3. 생성자 함수 및 this 키워드
@@ -34,6 +38,7 @@
 4. 개인 및 공용 엑세스 수정자
 
 4-1. filed에 private => 클래스안에서, 클래스에서 지정된 메서드 내에서 필드를 조작할 수 있다.
+=> obj.name = 'HWT' => 이런 접근이 불가능해진다는 것이다.
 
 4-2. public => default, 외부에서 엑세스할 수 있다.
 
@@ -47,6 +52,8 @@
 5-2. constructor(private name : string, public age : number){
 
 } => 매개변수에 모든 것을 설정하는 방법이다.
+
+** constructor의 매개변수에 외부의 필드 + value를 모두 설정하는 방법이다.
 
 
 6. 읽기전용 속성

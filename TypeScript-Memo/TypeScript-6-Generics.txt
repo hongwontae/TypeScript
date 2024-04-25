@@ -5,5 +5,52 @@
 => 타입스크립트의 효율이 더욱 올라간다.
 
 1-2. const promise : Promise<string> = new Promise(()=>{...})
+=> promise에 타입+제네릭이 존재하지 않으면 promise<unknown>이 타입 지정된다.
 
 *** 제네릭을 구현함으로써 더 안정적인 코드 구축과 타입스크립트 지원을 받을 수 있다.
+
+
+2. Generics Function
+fucntion merge<T> => T 타입이 존재한다. 다만 제약사항이 없기에 any와 같다.
+=> T는 특별한 무엇가가 아니라 변수 이름 같은 것이다.
+
+
+3. 제약 조건 작업하기
+extends 타입을 통해 제네릭 타입을 구체적으로 만들 수 있다.
+<T extends string, U extends object>
+
+
+4. 인터페이스를 통한 프로퍼티 여부 제약사항
+
+interface Lengthy{
+    length : number
+};
+
+function countAndDescribe<T extends Lengthy>(element : T) : [T, string]{
+    let aaa = 'Got no value'
+    if(element.length === 1){
+        aaa = 'Got 1 Element'
+    } else if(element.length > 1){
+        aaa = 'Got ' + element.length + ' Elements';
+    }
+    return [element, aaa];
+}
+
+=> 제네릭 T 타입은 length라는 속성이 존재해야 하는 제약사항이 걸렸다.
+=> interface로 프로퍼티 제약사항을 넣었기 떄문이다.
+
+
+5. keyof 제약사항
+제네릭 타입의 제약사항으로 'T extends keyof U'을 사용하면 T는 언제나 U의 키라는 것을 의미한다.
+
+
+6. 제네릭 클래스
+6-1. 클래스에 제네릭 타입을 주고 생성자 함수를 통해 객체를 만들 떄 제네릭 타입을 지정시킬 수 있다.
+=> 객체를 생성할 떄 유연한 타입 선정과 생성자 함수 실행의 타입 엄격함을 가져간다.
+
+6-2. 클래스에 생성자 함수를 만들 떄 지정하는 타입의 제한을 걸 수 있다.
+ex) class DataStorage<T extends string | number | boolean>
+
+6-3. 클래스 내부에서 모든 프로퍼티나 메서드들이 생성자 함수의 타입을 따라가게 할 수 있다.
+=> 제한 타입은 각각 두게 만들 수 있다.
+

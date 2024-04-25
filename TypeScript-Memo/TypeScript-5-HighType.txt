@@ -13,7 +13,7 @@ typeof, in, instanceof 키워드를 타입 가드로 사용한다.
 
 
 * instanceof 왼쪽의 객체가 오른쪽의 클래스로부터 파생되었는가? ture/false로 나타낸다.
-=> 인터페이스나 객체 리터럴로 정의되었다면 instanceof 적용 불가능
+=> 인터페이스나 객체 리터럴로 정의되었다면 instanceof 불가능
 
 
 3. 구별된 유니언
