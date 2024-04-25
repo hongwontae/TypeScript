@@ -54,3 +54,14 @@ ex) class DataStorage<T extends string | number | boolean>
 6-3. 클래스 내부에서 모든 프로퍼티나 메서드들이 생성자 함수의 타입을 따라가게 할 수 있다.
 => 제한 타입은 각각 두게 만들 수 있다.
 
+
+7. 제네릭 유틸리티 타입
+7-1. Partial => Partial<objectName>
+=> 해당 객체는 나중에 objectName이 될 객체라고 알려준다.
+
+7-2. Readonly => Readonly<string[]>
+=> 읽기 전용 배열로 설정한다.
+
+
+
+

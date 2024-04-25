@@ -1,23 +1,58 @@
-class DataStorage<T extends string | number | boolean>{
-    public data : T[] = [];
-    
-    addItem(item : T){
-        this.data.push(item);
-    }
+// test
 
-    removeItem(item : T){
-        if(this.data.indexOf(item) === -1){
-            return;
-        }
-        this.data.splice(this.data.indexOf(item), 1);
-    }
+const testA1 : Array<string> = ['1','2'];
 
-    getItems(){
-        return [...this.data];
+const promise : Promise<string> = new Promise((resolve, reject)=>{
+    if(1==1){
+        resolve('Resolve')
+    } else{
+        reject('Reject')
     }
+});
+
+promise.then(data => console.log(data.length));
+
+function add<T>(a : T){
+    return a;
+};
+const addResult = add<number>(10);
+console.log(addResult);
+
+
+
+function addPlus<T extends number , U extends string>(a: T, b : U){
+    let nData = a+Math.random();
+    let sData = b+' KoreaMan';
+
+    let arr = [nData, sData];
+    return arr;
 }
 
-const TextStorage = new DataStorage<string>();
-TextStorage.addItem('Jerrad');
-TextStorage.addItem('Coutinew');
-console.log(TextStorage);
+const a = addPlus(4, 'UTube');
+console.log(a);
+
+interface CheckLength{
+    length : number;
+}
+
+function lengthTypeCheck<T extends CheckLength >(a : T, b : T){
+    let AL = a.length;
+    let BL = b.length;
+    let com = AL+BL;
+    return com;
+};
+
+function okey<T extends object, U extends keyof T>(a : T, b : U){
+    return a[b];
+};
+
+const okey2 = okey({name : 'HWT'}, 'name');
+console.log(okey2)
+
+
+
+
+
+
+
+
