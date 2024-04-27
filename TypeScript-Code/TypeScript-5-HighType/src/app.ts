@@ -14,6 +14,8 @@ interface ErrorContainer {
     [prop : string] : string;
 }
 
+
+
 // 함수 오버로드
 type Combination = string | number;
 
