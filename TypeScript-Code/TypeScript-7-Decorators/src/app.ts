@@ -1,55 +1,50 @@
-function Log(target : any, propertyName : string){
-    console.log('Property decorator!')
-    console.log(target, propertyName);
+function Autobind(_1 : any, _2 : string, des : PropertyDescriptor){
+    const originalMethod = des.value;
+    const adjDescriptor : PropertyDescriptor = {
+        configurable : true,
+        enumerable : false,
+        get(){
+            const boundFn = originalMethod.bind(this);
+            return boundFn
+        },
+    }
+    return adjDescriptor;
 }
 
-function Log2(target : any, name : string, des : PropertyDescriptor){
-    console.log('Accessor decorator');
-    console.log(target);
-    console.log(name);
-    console.log(des)
+class Printer{
+    message = 'Hello World';
+
+    @Autobind
+    showMessage(){
+        console.log(this.message);
+    }
 }
 
-function Log3(target : any, name : string, des : PropertyDescriptor){
-    console.log('Method!');
-    console.log(target);
-    console.log(name);
-    console.log(des)
-}
+const p = new Printer();
 
-function Log4(target : any, methodName : string | symbol, position : number){
-    console.log('Parameter!');
-    console.log(target)
-    console.log(methodName)
-    console.log(position)
-}
+const button = document.querySelector('button')!;
+button.addEventListener('click',p.showMessage);
 
-class Product{
-    // @Log
+
+class Course{
     title : string;
-    private _price :number;
+    price : number;
 
-    // @Log2
-    public set price(v : number) {
-        if(v > 0){
-            this._price = v;
-        }else{
-            throw new Error('Fail');
-        }
-    }
-    
-
-    constructor(t : string,p : number){
+    constructor(t : string, p : number){
         this.title = t;
-        this._price = p;
-    };
-
-    // @Log3
-    getPriceWithTax(@Log4 tax : number){
-        return this._price * (1 + tax);
+        this.price = p;
     }
 }
 
-const product = new Product('Hello-World', 1000);
+const form = document.querySelector('form')!;
+form.addEventListener('submit',(e)=>{
+    e.preventDefault();
+    const textEl = document.getElementById('t1') as HTMLInputElement;
+    const numEl = document.getElementById('n1') as HTMLInputElement;
 
-//DecoProp-Deco-gs-Deco-method-Deco-Parameter
+    const title = textEl.value;
+    const price = +numEl.value;
+
+    const course = new Course(title, price);
+    console.log(course)
+})
