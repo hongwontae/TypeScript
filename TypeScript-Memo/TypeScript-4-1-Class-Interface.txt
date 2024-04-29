@@ -21,7 +21,6 @@
 => 외부의 필드를 지정해야만 constructor의 변수가 될 수 있다.
 => 외부의 필드이지만 constructor의 변수가 아닌 경우는 default값을 줘야한다.
 
-** 외부 필드는 key/ constructor의 매개변수는 value를 설정하는 것이다.
 
 
 3. 생성자 함수 및 this 키워드

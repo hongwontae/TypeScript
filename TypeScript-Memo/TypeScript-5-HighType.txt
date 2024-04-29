@@ -60,7 +60,7 @@ const errorBag : ErrorContainer = {
 ?.을 사용해서 객체의 프로퍼티 유무를 확인한다. 프로퍼티가 존재하지 않으면 실행하지 않는다.
 
 
-8. Null 병합
+8. Null 병합 연산자 ??
 a ?? b => a가 null이나 undefined라면 b를 사용(할당)해라.
 
  

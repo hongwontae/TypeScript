@@ -15,6 +15,7 @@
 3. 타입 Alias(사용자 지정 타입)
 3-1. 타입을 생성하여 사용할 수 있다.
 3-2. type typeName = string | number or 'as-number' | 'as-text'...
+=> type + 유니언 타입 + 리터럴 타입
 
 
 4. 함수 반환 타입 및 무효
