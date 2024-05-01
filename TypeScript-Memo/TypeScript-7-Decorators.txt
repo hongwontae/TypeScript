@@ -85,6 +85,7 @@ ex) function add(logging){
 8-1. 속성 Deco, 매개변수 Deco return value값이 사용되지 않는다.
 
 8-2. 접근자, 메서드 데코레이터의 return은 새로운 설명자 객체를 반환할 수 있다.
+=> 반환된 새로운 설명자 객체가 실행된다.
 function setterDeco(target : any, name : string, desc : PropertyDe..) : ProprtyDe..{
     ...
     return {

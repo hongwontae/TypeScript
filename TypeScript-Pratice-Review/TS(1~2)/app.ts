@@ -82,6 +82,15 @@ function generateError(n1 : string, n2 : string) : never{
 generateError('SSSS', 'SSS11');
 
 
+class PPP{
+    constructor(){
+        console.log('OOO')
+    }
+}
+
+function ppp(this : PPP, a : number, b : number){
+    console.log(a+b);
+}
 
 
 
