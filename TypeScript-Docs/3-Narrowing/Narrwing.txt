@@ -1,0 +1,47 @@
+1. Narrowing
+타입이 두 개 이상으로 지정되면 해당 변수을 사용할 떄 어떤 타입인지 알아내는 개념
+
+
+2. Type Guard
+Narrowing 중 하나이고 타입을 런타임에 좁히는 기술
+
+
+3. Truthiness Narrowing
+if 조건을 통해 타입을 축소한다.
+
+
+4. Equality Narrowing
+swtich-case/ if(==/===)를 사용해서 타입을 축소한다.
+
+
+5. The n operator Narrowing
+in => a in b : a라는 key가 b의 객체에 존재하는가?
+=> 이 키워드를 통해 타입을 축소할 수 있다.
+
+
+6. Instanceof Narrowing
+instanceof : a instanceof b => a가 b라는 생성자함수에서 인스턴스화 되었다.
+
+
+7. Type Predicate
+function checkString() : value is string{
+    return typeof value === 'string'
+}
+=> : value is string을 Type Predicate라고 한다.
+=> 함수의 return의 boolean이고 true일 떄 value의 타입을 string이라고 지정하는 뜻이다.
+
+
+8. Discriminated unions
+인터페이스에 식별자 : value을 저장할 수 있다. => 클래스에도 추가되야하는 프로퍼티이긴하다.
+
+
+9. never Type
+9-1. 어떤 값도 가질 수 없는 빈 타입
+9-2. 모든 타입에 할당 가능한 하위 타입이다.
+9-3. 함수 표현식이나 화살표 함수 표현식에서 항상 오류를 발생시키거나 절대 반환하지 않는 반환 타입으로 쓰인다.
+
+
+제네릭 및 함수에서 허용되지 않는 파라미터
+호환 되지 않는 타입 교차
+빈 유니언 타입 (유니언 했지만 아무것도 안되는 경우)
+
