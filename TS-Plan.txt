@@ -1,3 +1,8 @@
 1. getter, setter Understand => Autobind
+
 2. {new}
-3. call signature
+=> c : {new(args...) : {}}
+=> c라는 변수는 생성자 함수이다. 그래서 {new} 사용 => new는 인자를 받아들인다, new(args...) => new로 생성된 객체의 타입은?
+=> : type or {name : 'HWT'...}
+
+3. call signature (o)
