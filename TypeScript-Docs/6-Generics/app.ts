@@ -24,18 +24,69 @@ interface Gener{
 let a5 : Gener = function<T>(a:T) : T{
     return a;
 }
-console.log(a5(50));
 
-class Person<T, V>{
-    public name : T;
-    public age : V;
 
-    constructor(n : T, a :V){
+// 클래스 + 제네릭
+class Person2<T,U>{
+    name! : T;
+    age! : U;
+
+    constructor(n : T, a : U){
         this.name = n;
         this.age = a;
-    }
-    add! : (a :T, b :V)=> T
+    };
+
+    call(){
+        console.log(`My Name is ${this.name} and my age ${this.age}`);
+    };
+
 };
+
+const person = new Person2<string, number>('String', 3000);
+person.call();
+
+
+// 제약사항 + 인터페이스
+interface LengthFull{
+    length : number
+};
+
+function checkLengthProperty<T extends LengthFull>(a : T){
+    console.log(a.length);
+    return a;
+};
+
+const startingMember = checkLengthProperty({length : 10});
+console.log(startingMember);
+
+
+// 제약사항 + keyof
+let n1 = {
+    ak : 'Ak47',
+    poison : 'retire',
+    ksep : 'backSen ffnam'
+};
+
+function checkObjKey<T, U extends keyof T>(a : T, b : U){
+    console.log(a[b]);
+}
+
+checkObjKey(n1, 'ak');
+
+
+// 제약사항 + new
+function checkB<T>(a : {new () : T}) : T{
+    return new a();
+}
+
+type Predicate = (x: unknown) => boolean;
+type K = ReturnType<Predicate>;
+
+
+
+
+
+
 
 
 

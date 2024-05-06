@@ -5,7 +5,7 @@
 1-2. function의 generics
 => function add(type : any) : any{
     return type
-} // 리턴 타입은 다양하다.
+} // 선언 시점에 리턴 타입은 모른다. => any
 
 or function add<T>(a : T) : T{
     retunr a
@@ -25,10 +25,29 @@ or function add<T>(a : T) : T{
 3-1. 함수 표현식 타입 : <T>(a : T, b : number) => T
 3-2. call signatures : {<T>(a : <T>) : T   } 
 3-3. interface
+=> 어떤 제네릭이 들어와야하는지 타입 설정하는 것이다.
 
 
 4. Class and generics
 4-1. 클래스와 인터페이스의 제네릭 선언은 각 이름 앞에서 한다.
 ex) class name<>{}/ interface name<>{}
 
-4-2. 
+4-2. 클래스를 호출하여 객체를 만들 떄 new Person<>.. or new Person('str',20) (ts 추론적기능을 이용한 제네릭 부여);
+
+4-3. 클래스에 제네릭 T,S를 이용하여 타입을 지정시키면 된다.
+
+
+5. extends 제약사항
+
+5-1. 인터페이스 제약사항
+=> 인터페이스는 클래스/ 객체의 청사진이다.
+=> 인터페이스를 작성해서 들어오는 제네릭은 어떤 객체여야한다고 제약사항을 걸어줄 수 있다.
+
+5-2. keyof 제약사항
+=> a keyof b : a는 객체이고 b는 a의 키이다.
+
+5-3. new 제약사항
+=> 생성자 함수를 받아들일 떄는 제네릭과 new을 함께 사용해야 한다.
+=> (a : {new() : T}) : T
+
+
