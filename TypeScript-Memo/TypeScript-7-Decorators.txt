@@ -97,6 +97,9 @@ function setterDeco(target : any, name : string, desc : PropertyDe..) : ProprtyD
 => 설명자 객체를 최종적으로 리턴하면 기존의 설명자 객체를 덮어쓴다.
 
 
+*** 데코레이터 팩토리 (return 활용)은 기존의 클래스(생성자 함수), 설명자 객체(getter, setter)등을 전부 오버라이딩하는 것이다.
+
+
 
 
 

@@ -10,5 +10,9 @@
 
 
 (2024/05/03)
-1. TS-Docs Object-Types
+1. TS-Docs Object-Types (o)
+
+
+(2024/05-05)
+1. Generics
 

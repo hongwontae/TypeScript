@@ -13,11 +13,19 @@ add(10,10,con);
 
 type callSignature = {
     (a : number) : void
+    (a : string) : void
 };
 
-let a2: callSignature = (a : number)=>{
- console.log(a);
+let a2: callSignature = (a : number | string)=>{
+    if(typeof a === 'number'){
+        console.log(a);
+    } else {
+        console.log(a.toString())
+    }
 }
+
+
+console.dir(a2);
 
 type combination = string | number
 

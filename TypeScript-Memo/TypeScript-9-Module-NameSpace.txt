@@ -1,0 +1,24 @@
+1. NameSpace
+1-1. 파일을 분리하고 namespace을 이용해 하나로 연결되게 만드는 코드
+1-2. tsconfig 작업을 하지 않았을 떄 namespace을 사용해도 js의 코드는 ts의 reference path을 잃어버리기 떄문에 에러가 발생한다.
+1-3. outFile을 통해 namespace의 여러 파일을 하나로 컴파일되게 만들고 html에 주면 된다.
+1-4. "moduleResolution": "node" 처리를 해야 한다.
+
+
+2. File-Folder Structure
+2-1. reference path을 통해 각 파일을 연결해줘야 한다.
+2-2. ts=>js 컴파일 할 떄의 reference path로 연결짓는데 로직이 진행중에 path가 필요한 경우가 존재한다.
+=> 이 떄는 TS 컴파일러가 잡지 못한다. 즉, 다 reference path로 연결해줘야 한다.
+
+
+3. ES 모듈 사용하기
+3-1. TS에서 Import, Export를 사용하여 파일을 구성하고 싶다면 "module" : 'es2015'을 설정해야 한다.
+3-2. target은 es6 이상이여야 한다.
+3-3. outFile 주석처리를 한다.
+3-4. script tag에 defer 대신 type="module" 속성을 추가한다.
+3-5. 모듈을 사용해서 파일을 구조화하면 html이 서버에 전송될 떄 module화 된 모든 JS가 HTTP 요청을 통해 다운로드된다.
+=> 성능 문제가 있을 수 도 있다.
+
+
+
+

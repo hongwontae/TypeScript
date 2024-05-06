@@ -14,6 +14,12 @@ function consoleLog(a,b,cb:(a : number, b : number) => void){
 
 *** 함수 선언문에 직접적으로 타입 선언은 불가, 함수 표현식에만 직접적으로 타입 선언 가능
 => 매개변수, 함수 표현식에만 사용가능
+=> {} type 키워드 없이 호출 시그니처 타입 할당가능
+
+*** Call Signatures는 type name = {
+    (a : number) : void;
+    (b : string) : void
+} 처럼 구현 가능, 이 떄는 매개변수 타입을 두 개로 지정해야 한다.
 
 
 2. 선택적 매개변수 ? 

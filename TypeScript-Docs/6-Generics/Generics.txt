@@ -1,0 +1,34 @@
+1. 제너릭
+1-1. 재사용 가능한 구성 요소를 만들기 위한 기능 => generics
+=> 타입과 타입의 연결을 의미한다.
+
+1-2. function의 generics
+=> function add(type : any) : any{
+    return type
+} // 리턴 타입은 다양하다.
+
+or function add<T>(a : T) : T{
+    retunr a
+} // 리턴 타입은 T에 의해 정해지고 T는 선언 시점에는 정해지지 않고 호출시점에 정해진다.
+
+1-3. let savage = add<number>(10)
+=> T 타입을 정해주는 것이다.
+
+1-4. let savage2 = add(20);
+=> T 타입을 TS의 추론적 기능을 사용하여 number로 정해졌다.
+
+
+2. 제네릭이 구성되면 타입을 얻고 해당 타입으로 지정된 리턴 타입, 변수 타입을 검사한다.
+
+
+3. 제네릭 타입 설정
+3-1. 함수 표현식 타입 : <T>(a : T, b : number) => T
+3-2. call signatures : {<T>(a : <T>) : T   } 
+3-3. interface
+
+
+4. Class and generics
+4-1. 클래스와 인터페이스의 제네릭 선언은 각 이름 앞에서 한다.
+ex) class name<>{}/ interface name<>{}
+
+4-2. 
