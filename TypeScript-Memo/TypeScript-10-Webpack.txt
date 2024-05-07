@@ -1,1 +1,79 @@
-1. 
+1. Webpack을 사용하지 않을 떄의 html,css,js의 브라우저 동작
+1-1. 모든 Htpp 요청에는 기본 오버헤드(기본 지속 시간)이 존재한다.
+1-2. import/export js는 하나만 요청이 되는 것이 아니다.
+=> 모든 파일에 대한 http 요청 => http 응답이 발생한다.
+
+
+2. Webpack
+2-1. 파일을 번들링하는 도구이다.
+2-2. 코드 최적화 + 파일 집약 + 빌드 단계 추가 기능을 가지고 있다.
+
+
+3. webpack 설치 & important 종속성
+=> npm install --save-dev webpack webpack-cli webpack-dev-server typesscript ts-loader
+
+webpack => 코드 번들링을 위한 특정한 기능 플러그인 + 코드 변환을 돕는 도구
+webpack-cli & webpack-dev-server => 웹팩으로 만들어진 파일의 변화를 실시간으로 감지하여 브라우저에 적용해주는 도구
+ts-loader => 코드 타입을 JS로 변환하는 방법을 알려주는 패키지이다.
+
+
+4. 설정
+4-1. tsconfig => target => es6 or es6
+=> target을 기반으로 코드 변환 방식을 결정한다.
+
+4-2. module => es2015 or es2016
+
+4-3. outDir => 컴파일 된 파일의 위치
+
+4-4. rootDir => 필요없다. 웹팩이 대신해서 위치를 지정한다.
+
+4-5. webpack.config.js
+=> 웹팩이 프로젝트 작업 방법을 전달할 떄 자동적으로 찾는 파일이다.
+=> webpack 구조를 갖추는 파일이다.
+=> import의 js 확장자를 모두 지워야 한다. =>다른 작업을 할 떄도 확장자를 제거해야 한다.
+
+ex)const path = require('path');
+module.exports = {
+  entry: './src/app.ts',
+  output: {
+    filename: 'bundle.js',
+    path: path.resolve(__dirname, 'dist')
+  }
+};
+entry => 전체 프로젝트가 시작하는 파일
+output => 최종 결과물 js 파일(tsconfig.json의 outDir과 같아야 한다.)
+        해당 파일이 위치해야 하는 path을 가지는 객체 (절대 경로로 구현해야 한다.)
+
+
+5. ts-loader Package
+webpack-config 설정
+
+5-1. module => 웹팩에게 찾은 파일로 무엇을 해야 하는지 알려준다.
+5-2. ex) module : {
+    reules : [
+
+    ]
+}
+5-3. loader는 특정 파일을 어떻게 다뤄야 하는지 웹팩에게 알려주는 패키지이다.`
+=> tsconfig.json 파일을 가져와 활용한다.
+
+5-4. "sourceMap": true => 웹 페이지 지원이 가능해진다.
+(브라우저 탭에 Sources의 ts 파일이 전달된다.)
+
+5-5. devtool : 'inline-source-map'
+=> 효율적인 webpack 개발 툴
+
+
+6. "start" : "webpack-dev-server"
+=> 웹팩 빌드 워크플로가 실행된다.
+
+
+
+
+
+
+
+
+
+
+
