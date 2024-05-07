@@ -1,3 +1,4 @@
+// 함수 선언문 + 제네릭
 function add<T>(a : T) : T{
     return a;
 };
@@ -81,6 +82,18 @@ function checkB<T>(a : {new () : T}) : T{
 
 type Predicate = (x: unknown) => boolean;
 type K = ReturnType<Predicate>;
+
+
+// 제네릭 default
+type myType<T = String> = {
+    name : T;
+    age : number;
+};
+
+let cool : myType = {
+    age : 10,
+    name : 'kkk'
+}
 
 
 

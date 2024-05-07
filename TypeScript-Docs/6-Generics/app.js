@@ -1,4 +1,5 @@
 "use strict";
+// 함수 선언문 + 제네릭
 function add(a) {
     return a;
 }
@@ -54,3 +55,7 @@ checkObjKey(n1, 'ak');
 function checkB(a) {
     return new a();
 }
+let cool = {
+    age: 10,
+    name: 'kkk'
+};

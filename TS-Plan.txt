@@ -13,6 +13,6 @@
 1. TS-Docs Object-Types (o)
 
 
-(2024/05-05)
-1. Generics
+(2024/05/07)
+1. getter-setter 메서드?/ 클래스?
 
