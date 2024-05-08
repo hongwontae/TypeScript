@@ -1,0 +1,8 @@
+1. enum
+=> 특정 값을 고정하는 또다른 독립된 자료형
+
+ex) enum Avengers {SpiderMan, ironMan, antMan};
+=> Avengers.SpiderMan => 0
+=> Avengers.ironMan => 1
+.. 자동으로 인덱스가 부여된다.
+

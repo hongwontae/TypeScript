@@ -1,0 +1,99 @@
+1. string(template Literal도 포함), number, boolean
+
+
+2. Array
+2-1. String[] = ['a','b','c'];
+2-2. Array<String> = ['a','b'...];
+
+2-3. Tuple
+=> 고정된 길이 + 고정된 타입의 배열 타입이다.
+=> [string, number]
+=> ['a', 100];
+
+
+3. any
+특정한 값에 타입에러를 야기시키기를 원하지 않을 떄 사용하는 타입이다.
+any는 유형검사를 하지 않는다. => tsconfig, noImplicitAny의 true는 any 사용시 error로 표현한다.
+
+
+4. unknown
+4-1. 해당 값을 모른다는 의미로 any와 비슷하다.
+4-2. 다만 해당 타입을 할당할 떄 타입검사를 하지 않으면 에러가 발생한다.
+=> 타입검사의 유뮤가 unknown과 any의 차이점
+
+
+5. Object-Types
+5-1. let a : object;
+=> 객체, 배열, 함수까지 object 타입이라고 표현할 수 있다.
+
+5-2. {키 : types}를 통해 나열하면 된다.
+ex) let obj = {name : string, age : number}
+=> 가독성이 좋지 않기 떄문에 type-alias나 interface를 주로 사용한다.
+
+5-3. optional Properties => ?
+=> 객체 타입을 지정할 떄 해당 프로퍼티가 없을 수 도 있다고 설명하는 ?
+=> 키? : type 순서이다.
+=> type-alias나 interface에서도 사용가능
+
+
+6. Union-Types
+6-1. 둘 이상의 다른 유형으로 구성된 유형을 유니언 타입이라고 한다.
+
+6-2. 배열 유니언의 경우 괄호와 |을 혼합하여 사용한다.
+=> let arr : (string|number)[] = [1,2,3,'a',4,'b'];
+
+6-3. 유니언 타입으로 지정했을 떄 두 타입이 모두 갖고 있는 프로퍼티만 사용가능하다.
+=> 타입을 사용하는 곳에서 타입을 narrow해야 한다. 
+=> typeof, instanceof, Array.isArray...
+
+
+7. Type-Alias
+7-1. Type typeName = string | number
+7-2. Type objType1 = {name : string, age : number};
+* Type에 {}는 할당되는 것은 객체라는 의미이다.
+
+7-3. Intersection Type
+=> &를 사용해서 type끼리 연결시킨 타입을 의미한다.
+
+
+10. Type-Assertions(형 변환)
+as, <>를 이용해서 어떤 타입인지 TS에게 알려준다.
+=> 타입 지정으로는 식별이 불가능할 떄
+=> TS는 HTML을 읽지 않기떄문에 HTML ELEMENT에 접근할 떄/ DOM과 소통할 떄 
+
+
+11. Literal Types
+11-1. 숫자와 문자에 한해서 직접 값 자체를 타입으로 선언이 가능하다.
+string => 'as-text';
+number => 209;
+
+ex) type = 'as-text' | 'as-number' | 209; 
+
+
+12. null, undefined
+12.1 ! => 변수뒤에 !가 붙으면 해당 변수는 null, undefined가 아니라고 TS가 이해한다.
+
+
+13. never
+13-1. 절대 발생할 수 없는 타입
+13-2. 에러 발생 시 반환 타입으로 많이 사용한다.
+
+
+14. void
+14-1. 함수 본문에 return이 존재하지 않을 떄 사용
+14-2. 기능적으로 undefined가 반환된다.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
