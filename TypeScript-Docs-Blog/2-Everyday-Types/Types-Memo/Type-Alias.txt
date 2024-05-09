@@ -1,0 +1,7 @@
+1. Type-Alias
+1-1. Type typeName = string | number
+1-2. Type objType1 = {name : string, age : number};
+* Type에 {}는 할당되는 것은 객체라는 의미이다.
+
+1-3. Intersection Type
+=> &를 사용해서 type끼리 연결시킨 타입을 의미한다.

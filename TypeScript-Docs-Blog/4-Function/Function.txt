@@ -21,8 +21,9 @@ function consoleLog(a,b,cb:(a : number, b : number) => void){
 
 2-2. Call Signatures
 1. type, interface 키워드를 이용한다.
-2. => 대신 :을 사용한다. (: 사용한다는 것은 함수를 정의하겠다는 뜻)
+2. {} 내에서는 => 대신 :을 사용한다. 
 3. call Signatures 앞에 new 키워드 추가하여 생성자 함수로 기능하게 할 수 있다.
+4. call Signatures는 함수 타입을 구현하는 방법임으로 다른 방향성을 가질 수 없다.
 
 *** 함수 선언문에 직접적으로 타입 선언은 불가, 함수 표현식에만 직접적으로 타입 선언 가능
 => 매개변수, 함수 표현식에만 사용가능
@@ -41,6 +42,7 @@ function consoleLog(a,b,cb:(a : number, b : number) => void){
 4-1. 함수문 위에서 함수의 매개변수와 리턴값을 규정하는 문법을 의미한다.
 4-2. function FnName(args, aggs..) : return-Type => 함수 오버로드 구성식
 4-3. TS가 스스로 반환값을 식별할 수 없을 떄 많이 사용한다.
+=> 매개변수에 따른 반환값을 식별할 수 없을 떄!!
 
 
 5. this 매개변수

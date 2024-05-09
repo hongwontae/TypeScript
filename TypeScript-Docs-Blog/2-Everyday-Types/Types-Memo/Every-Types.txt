@@ -47,15 +47,6 @@ ex) let obj = {name : string, age : number}
 => typeof, instanceof, Array.isArray...
 
 
-7. Type-Alias
-7-1. Type typeName = string | number
-7-2. Type objType1 = {name : string, age : number};
-* Type에 {}는 할당되는 것은 객체라는 의미이다.
-
-7-3. Intersection Type
-=> &를 사용해서 type끼리 연결시킨 타입을 의미한다.
-
-
 10. Type-Assertions(형 변환)
 as, <>를 이용해서 어떤 타입인지 TS에게 알려준다.
 => 타입 지정으로는 식별이 불가능할 떄
