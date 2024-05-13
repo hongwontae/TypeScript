@@ -51,6 +51,5 @@ ex) class name<>{}/ interface name<>{}
 => (a : {new() : T}) : T
 
 
-6. 제네릭 default parameter
 
 

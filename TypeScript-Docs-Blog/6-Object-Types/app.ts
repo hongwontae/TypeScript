@@ -29,23 +29,3 @@ let saint : ttf = {
     name : 'cmcm',
 }
 
-interface StartMember {
-    name : string
-}
-
-interface BehindMember {
-    who : string
-    // ko : bigint => 불가 idnex signature 에러
-}
-
-interface BackMember extends StartMember, BehindMember {
-    [props : string] : string | number;
-    age : number
-};
-
-let c1 : BackMember;
-c1 = {
-    age :27,
-    name : 'hwt',
-    who : 'Are you'
-}
