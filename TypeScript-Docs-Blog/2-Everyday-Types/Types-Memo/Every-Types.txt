@@ -2,7 +2,7 @@
 
 
 2. Array
-2-1. String[] = ['a','b','c'];
+2-1. String[] = ['a','b','c'...];
 2-2. Array<String> = ['a','b'...];
 
 2-3. Tuple
@@ -33,7 +33,7 @@ ex) let obj = {name : string, age : number}
 5-3. optional Properties => ?
 => 객체 타입을 지정할 떄 해당 프로퍼티가 없을 수 도 있다고 설명하는 ?
 => 키? : type 순서이다.
-=> type-alias나 interface에서도 사용가능
+=> type-alias나 interface, class, {}로 표현가능
 
 
 6. Union-Types

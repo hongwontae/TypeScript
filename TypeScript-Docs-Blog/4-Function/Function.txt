@@ -33,6 +33,10 @@ function consoleLog(a,b,cb:(a : number, b : number) => void){
     (b : string) : void
 } 처럼 구현 가능, 이 떄는 매개변수 타입을 두 개로 지정해야 한다.
 
+=> type이나 interface나 call Signatures를 구성하여 함수를 만들면 TS가 이를 인식한다.
+=> {() : type}이 존재하면 이는 무조건 함수 타입을 규정한다는 뜻으로 인식한다.
+=> 다른 속성을 추가하면 함수 객체의 프로퍼티가 된다.
+
 
 3. 선택적 매개변수 ? 
 매개변수 뒤에 ?를 사용해서 없을 수 도 있음을 알려준다.
