@@ -20,7 +20,7 @@ in => a in b : a라는 key가 b의 객체에 존재하는가?
 
 
 6. Instanceof Narrowing
-instanceof : a instanceof b => a가 b라는 생성자함수에서 인스턴스화 되었다.
+instanceof : a instanceof b => a가 b라는 생성자함수에서 인스턴스화 되었는가?
 
 
 7. Type Predicate
@@ -31,7 +31,7 @@ function checkString() : value is string{
 => 함수의 return의 boolean이고 true일 떄 value의 타입을 string이라고 지정하는 뜻이다.
 
 
-8. Discriminated unions
+8. Discriminated union
 인터페이스에 식별자 : value을 저장할 수 있다. => 클래스에도 추가되야하는 프로퍼티이긴하다.
 
 

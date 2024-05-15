@@ -35,3 +35,6 @@ numFunc(1000);
 function errorGo() : never{
     throw new Error('This is Sparta')
 }
+
+
+

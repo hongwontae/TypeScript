@@ -29,10 +29,8 @@
 
 
 6. 인덱스 타입
-6-1. 인터페이스에 직접 키-value를 지정하는 방법이다.
-6-2. key-type(key-name) : 타입 or 리터럴 타입 => 이러한 방식으로 지정한다.
-interface User {
-    [grade : string] : 'HWT'
-}
-
+6-1. 인터페이스에 프로퍼티 규칙을 정하는 것이다.
+6-2. interface Rule{
+    [user : string] : string
+} => Rule이 할당된 객체의 프로퍼티는 키는 string, value도 string이어야 한다.
 

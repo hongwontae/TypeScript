@@ -49,3 +49,8 @@ interface Index2{
 };
 
 let koala31212 : Index2 = ['str','str','str','str','str','str',];
+
+type Tui ={
+    [user : string] : string;
+    
+}
