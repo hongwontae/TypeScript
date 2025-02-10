@@ -16,31 +16,39 @@
 //     return n1+ n2;
 // }
 
-interface Named extends Greetable {
-  readonly name?: string;
-  output?: string;
+// interface Named extends Greetable {
+//   readonly name?: string;
+//   output?: string;
+// }
+
+// interface Greetable {
+//   greet(phrase: string): void;
+// }
+
+// class Person implements Greetable {
+//   name?: string;
+//   age = 30;
+//   constructor(n?: string) { // 기본값, ?
+//     if (n) {
+//       this.name = n;
+//     }
+//   }
+//   greet(phrase: string): void {
+//     console.log(phrase);
+//   }
+// }
+
+// let user1: Greetable;
+
+// user1 = new Person();
+
+// user1.greet("HWT");
+// console.log(user1);
+
+interface koko {
+  [index : number] : string
 }
-
-interface Greetable {
-  greet(phrase: string): void;
+const asd : koko = {
+  1 : 'ddd'
 }
-
-class Person implements Greetable {
-  name?: string;
-  age = 30;
-  constructor(n?: string) { // 기본값, ?
-    if (n) {
-      this.name = n;
-    }
-  }
-  greet(phrase: string): void {
-    console.log(phrase);
-  }
-}
-
-let user1: Greetable;
-
-user1 = new Person();
-
-user1.greet("HWT");
-console.log(user1);
+console.log(asd)

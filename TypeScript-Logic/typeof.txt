@@ -1,0 +1,9 @@
+1. typeof
+=> 값의 타입을 추론하거나, 변수나 객체의 타입을 가져오는데 사용합니다.
+=> const person = {name : 'kk', age : 300} 
+=> type PersonType = typeof person ({name : string, age : number})
+
+
+2. JavaScript와 TypeScript의 typeof 차이
+=> JS typeof는 값의 타입을 문자열로 반환하는 연산자입니다.
+=> TS typeof는 변수나 객체의 타입을 추론하여 타입을 정의하는데 사용합니다.
