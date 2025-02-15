@@ -7,3 +7,11 @@
 2. JavaScript와 TypeScript의 typeof 차이
 => JS typeof는 값의 타입을 문자열로 반환하는 연산자입니다.
 => TS typeof는 변수나 객체의 타입을 추론하여 타입을 정의하는데 사용합니다.
+
+
+3. keyof
+=> 객체 타입의 모든 키를 문자열, 문자열 리터럴 유니온 타입으로 반환하는 연산자입니다.
+=> interface Person {
+    name : string;
+    age : number;
+} console.log(keyof Person) => 'name' | 'age'
